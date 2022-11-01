@@ -3,10 +3,10 @@ oh-my-posh init pwsh | Invoke-Expression
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\agnoster.omp.json" | Invoke-Expression
 Import-Module -Name Terminal-Icons
 
-# Acortardor para limpiar la consola
+# Alias to clear the console
 function c { Clear-Host }
 
-# Acortardor para abrir vscode y que no dependa de la consola
+# Alias to open visual studio code with a directory or current
 function vs {
   # Current directory
   $dir = Get-Location
@@ -17,7 +17,7 @@ function vs {
   }
 }
 
-# Acortador para abrir mysql
+# Aliast to open Mysql
 function my {
   if ($args.Length -eq 0) {
     mysql -u root -p
